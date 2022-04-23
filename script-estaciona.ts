@@ -10,7 +10,6 @@ interface Veiculo {
     function calcTempo(mil: number) {
         const min = Math.floor(mil/60000);
         const sec = Math.floor((mil % 60000) / 1000)
-
         return `${min}m e ${sec}s`;
     }
 
@@ -31,7 +30,7 @@ interface Veiculo {
                 <td>${veiculo.placa}</td>
                 <td>${veiculo.entrada}</td>
                 <td>
-                    <button class="delete" data-placa="${veiculo.placa}">X</button>
+                    <button class="delete" data-placa="${veiculo.placa}">X ENCERRAR</button>
                 </td>
             `;
             row.querySelector(".delete")?.addEventListener("click", function(){
@@ -71,7 +70,7 @@ interface Veiculo {
         const placa = $("#placa")?.value;
 
         if(!nome || !placa) {
-            alert("os campos nome e placa são obrigatórios");
+            alert("Os campos NOME e PLACA são obrigatórios");
             return;
         }
 
