@@ -47,7 +47,7 @@ interface Veiculo {
 
             const tempo = calcTempo(new Date().getTime() - new Date(entrada).getTime());
 
-            if(confirm(`O veiculo ${nome} permaneceu por ${tempo}. Deseja Encerrar?`)) return;
+            if(!confirm(`O veiculo ${nome} permaneceu por ${tempo}. Deseja Encerrar?`)) return;
 
             salvar(ler().filter(veiculo => veiculo.placa !== placa));
             render()
